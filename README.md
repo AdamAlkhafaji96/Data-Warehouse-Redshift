@@ -29,9 +29,9 @@ Dimension Tables: users, songs, artists, time
     etl.py - copy data from S3 to staging tables in Redshift, then transform the data into a dimensonal model.   
     
 # Instructions 
-1st. Create cluster 
+    1st. Create cluster 
     Recommended: In the same region as the S3 buckets ('us-west-2')
-2nd. Populate dwh.cfg file with [CLUSTER] HOST, DB_NAME, DB_USER, DB_ and [IAM_ROLE] information 
-3rd. Open terminal and run create_tables.py
-4th. Upon table creation run etl.py 
-5th. Conduct analysis on data
+    2nd. Populate dwh.cfg file with [CLUSTER] HOST, DB_NAME, DB_USER, DB_ and [IAM_ROLE] information 
+    3rd. Open terminal and run create_tables.py
+    4th. Upon table creation run etl.py 
+    5th. Conduct analysis on data
