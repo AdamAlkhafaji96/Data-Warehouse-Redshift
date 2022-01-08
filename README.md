@@ -9,20 +9,20 @@ Their data resides in S3, in a directory of JSON logs on user activity on the ap
 Song dataset is a subset of the Million Song Dataset.
 Log datasets have been created by this event simulator.
     
-# ELT Process (see DFD.png)
+# ELT Process
+![dwh dfd sparkify](https://user-images.githubusercontent.com/76083769/148635545-e6e6dbeb-a120-4413-a522-a0a9894cefcc.png)
 1. Extract the data from S3
 2. Load the data into staging tables on Redshift
 3. Transform the data into a set of dimensional tables
 4. Run queries for testing given by the Sparkify analytics team
 
-# Database Schema Design (see ERD.png)
+# Database Schema Design 
+![final_ERD_Sparkify](https://user-images.githubusercontent.com/76083769/148635494-089ff3dd-4519-4e5e-a7e0-a4296cf1cc33.jpg)
 Fact Table: songplays
 Dimension Tables: users, songs, artists, time
 
 # Project Structure
     README.MD 
-    DFD.png - Data Flow Diagram
-    ERD.png - Entity Relationship Diagram 
     dwh.cfg - contains cluster configuration information 
     sql_queries.py - contains sql queries for dropping and creating tables as well as copying and inserting data.
     create_tables.py - used to drop and create tables in redshift.
